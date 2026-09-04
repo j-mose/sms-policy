@@ -9,13 +9,18 @@ blockquote{margin:1rem 0;padding:.75rem 1rem;border-left:3px solid #ccc;backgrou
 <h1>How users opt in</h1>
 <p><strong>Operated by John Mosley, sole proprietor.</strong></p>
 <p>Vision is a self-hosted task-automation and monitoring application. Its user opts in to SMS notifications
-inside the application's own settings screen, by ticking a consent checkbox next to the wording below. The tick
-is stored with a timestamp; unticking it withdraws consent.</p>
+inside the application's own settings screen: he enters the mobile number to be notified and ticks a consent
+checkbox on the same form, next to the wording below. The number and the tick are stored together with a
+timestamp; unticking it withdraws consent.</p>
+<p>The application refuses to record a consent for any number other than the one it is configured to text, so the
+record cannot describe a phone that would never be messaged.</p>
 <h2>The consent wording the user sees</h2>
 <blockquote>I agree to receive automated SMS notifications from Vision at the configured mobile number: reminders and alarms I create, and notices that a background job has failed. Message frequency varies and is capped at 20 per day. Message and data rates may apply. Reply STOP to opt out, HELP for help.</blockquote>
 <h2>The screen</h2>
-<p>The consent checkbox on the application's Outbound SMS settings panel, shown ticked with the recorded
-confirmation beneath it:</p>
+<p>The application's Outbound SMS settings panel: the mobile number field and the consent checkbox on the same
+form, so the consent is plainly for that number. The number shown here is an example &mdash; the live
+configuration holds the operator's own mobile, and the application never displays more than its last four digits
+once saved.</p>
 <img src="./opt-in.png" alt="The Outbound SMS settings panel: a ticked consent checkbox beside the consent wording, with 'Consent recorded' shown below it.">
 <h2>What happens after opting in</h2>
 <p>The application sends only to the one mobile number registered in its configuration, and it has no input field
